@@ -21,10 +21,11 @@ $(function() {
   }
 
   try {
-    var socket = io.connect("http://"+location.hostname+":40223");
+    //var socket = io.connect("http://"+location.hostname+":40223");
+    var socket = io();
   } catch (err) {
     // TODO Status to warn user
-
+    console.log("Error: couldn't connect to the chat server: " + err);
   }
 
   if (socket !== undefined) {

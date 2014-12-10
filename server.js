@@ -26,7 +26,21 @@ var models = {
 var wsPattern = /^\s*$/;
 
 var port = 40223;
-var io = require('socket.io').listen(port).sockets;;
+//var io = require('socket.io').listen(port).sockets;
+
+/** Express */
+var express = require('express');
+var path = require('path');
+var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+app.use(express.static(path.join(__dirname, 'public')));
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/index.html');
+});
+http.listen(port, function() {
+  console.log('listening on *:' + port);
+});
 
 /** Users Store */
 var users = [];

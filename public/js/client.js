@@ -21,7 +21,7 @@ $(function() {
   }
 
   try {
-    var socket = io.connect("http://127.0.0.1:40223");
+    var socket = io.connect("http://"+location.hostname+":40223");
   } catch (err) {
     // TODO Status to warn user
 

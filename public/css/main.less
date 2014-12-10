@@ -1,0 +1,89 @@
+.box-sizing (@type: border-box) {
+  -webkit-box-sizing: @type;
+  -moz-box-sizing:    @type;
+  box-sizing:         @type;
+}
+
+.chat-window {
+  textarea, input {
+    font: 14px "Trebuchet MS", Arial, sans-serif;
+  }
+
+  max-width: 300px;
+
+  .chat-messages, .chat-textarea, .chat-name {
+    border: 1px solid #bbb;
+    padding: 10px;
+  }
+
+  .chat-message {
+    margin-bottom: 4px;
+
+    .name {
+      font-weight: bold;
+    }
+  }
+
+  .chat-messages {
+    height: 200px;
+    overflow-y: scroll;
+  }
+
+  .chat-textarea, .chat-name {
+    width: 100%;
+    outline: none;
+  }
+
+  .chat-name {
+    border-bottom: 0;
+    margin: 0;
+  }
+
+  .chat-textarea {
+    border-top: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .chat-status {
+    color: #bbb;
+    padding-top: 10px;
+  }
+
+  nav {
+    ul {
+      float: right;
+      width: 100%;
+      text-align: center;
+      list-style: none;
+
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      float: right;
+      display: block;
+      padding: 8px 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #069;
+      border-right: 1px solid #ccc;
+
+      &:hover {
+        cursor: pointer;
+        color: #c00;
+        background-color: #fff;
+      }
+    }
+  }
+}
+
+nav ul li.active-room {
+  background-color: #ddd;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #ccc;
+  }
+}

@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Elanche Chat</title>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" href="css/vendor/animate.css">
+</head>
+<body>
+  <div class="chat-window">
+    <nav>
+      <ul>
+        <li>Basketball</li>
+        <li>Football</li>
+        <li class="active-room">Default</li>
+      </ul>
+    </nav>
+    <input type="input" class="chat-name" placeholder="Enter your name">
+    <div class="chat-messages">
+
+    </div>
+    <textarea class="chat-textarea" placeholder="Type in your message"></textarea>
+    <div class="chat-status">Status: <span>Idle</span></div>
+  </div>
+
+  <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+  <script src="js/client.js"></script>
+</body>
+</html>

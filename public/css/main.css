@@ -1,0 +1,70 @@
+.chat-window {
+  max-width: 300px;
+}
+.chat-window textarea,
+.chat-window input {
+  font: 14px "Trebuchet MS", Arial, sans-serif;
+}
+.chat-window .chat-messages,
+.chat-window .chat-textarea,
+.chat-window .chat-name {
+  border: 1px solid #bbb;
+  padding: 10px;
+}
+.chat-window .chat-message {
+  margin-bottom: 4px;
+}
+.chat-window .chat-message .name {
+  font-weight: bold;
+}
+.chat-window .chat-messages {
+  height: 200px;
+  overflow-y: scroll;
+}
+.chat-window .chat-textarea,
+.chat-window .chat-name {
+  width: 100%;
+  outline: none;
+}
+.chat-window .chat-name {
+  border-bottom: 0;
+  margin: 0;
+}
+.chat-window .chat-textarea {
+  border-top: 0;
+  margin: 0;
+  max-width: 100%;
+}
+.chat-window .chat-status {
+  color: #bbb;
+  padding-top: 10px;
+}
+.chat-window nav ul {
+  float: right;
+  width: 100%;
+  text-align: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.chat-window nav li {
+  float: right;
+  display: block;
+  padding: 8px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #069;
+  border-right: 1px solid #ccc;
+}
+.chat-window nav li:hover {
+  cursor: pointer;
+  color: #c00;
+  background-color: #fff;
+}
+nav ul li.active-room {
+  background-color: #ddd;
+}
+nav ul li.active-room:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
